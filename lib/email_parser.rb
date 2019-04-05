@@ -9,8 +9,18 @@ class EmailParser
     @emails = csv_emails
   end
 
+  # def parse
+  #   info = emails.split(/[\s,]+/)
+  #   info.uniq
+  # end
   def parse
-    info = emails.split(/[\s,]+/)
-    info.uniq
+    email_array = []
+    # email_array << @emails.split(/[,\s]/)
+    # email_array.flatten
+    # email_array.delete("")
+    # return email_array
+    email_array = @emails.split(/[,\s]+/)
+    #email_array = email_array.reject {|email| email == ""}
+    email_array.uniq
   end
 end
