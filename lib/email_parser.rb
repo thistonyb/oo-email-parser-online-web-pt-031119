@@ -15,12 +15,12 @@ class EmailParser
   # end
   def parse
     email_array = []
-    # email_array << @emails.split(/[,\s]/)
-    # email_array.flatten
+    email_array << @emails.split(/[,\s]+/)
+    email_array.flatten
     # email_array.delete("")
-    # return email_array
-    email_array = @emails.split(/[,\s]+/)
+    return email_array
+    #email_array = @emails.split(/[,\s]+/)
     #email_array = email_array.reject {|email| email == ""}
-    email_array.uniq
+    #email_array.uniq
   end
 end
